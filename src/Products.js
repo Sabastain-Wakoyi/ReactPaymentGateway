@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, ListGroup, CardGroup, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+
 // import Card from "react-bootstrap/Card";
 // import ListGroup from "react-bootstrap/ListGroup";
 // import Container from "react-bootstrap/Container";
@@ -53,9 +55,10 @@ const Products = () => {
                   <Card.Text>
                   <p>${item.price}</p>
                   </Card.Text>
-                  <a href="/prouctsdetail"> 
+                  <Link to={`/productsdetail/${item.id}`}>     
                   <Button variant="primary">Product Details</Button>
-                  </a>
+                  </Link>
+          
                 </Card.Body>
               </Card>
               </div>

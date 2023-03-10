@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Carousel, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "../index.css";
+// import "../index.css";
 
 export const ProductsDetail = (props) => {
   let urlParams = window.location.pathname.split("/");
@@ -48,7 +48,7 @@ export const ProductsDetail = (props) => {
           {productsDetail?.images?.map((item, index) => {
             return (
               <Carousel.Item>
-                <img className="d-block w-100" src={item} alt="First slide" />
+                <img className="d-block w-100" src={item} alt="First slide" style={{"width":"100px"}}  />
                 <Carousel.Caption>
                   <h1 style={{ color: "white" }}>{productsDetail.brand}</h1>
                 </Carousel.Caption>
@@ -114,7 +114,7 @@ export const ProductsDetail = (props) => {
           <Link
             className="btn btn-primary"
             to={"/checkout/" + productsDetail.id}
-          >
+         >
             Checkout
           </Link>
         </div>
