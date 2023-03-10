@@ -7,6 +7,7 @@ import Products from './Products';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ProductsDetail } from './ProductsDetail';
 import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom"
+import { Checkout } from './Checkout';
 
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -46,8 +47,8 @@ const router = createBrowserRouter([
     path: "/checkout/:checkoutId",
     element: (
         <>
-          {/* <Checkout></Checkout> */}
-          {/* <Link to="/checkout/:checkoutId"></Link> */}
+          <Checkout></Checkout>
+          <Link to="/checkout/:checkoutId"></Link>
         </>
     )
   },
